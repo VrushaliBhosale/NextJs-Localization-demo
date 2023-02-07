@@ -12,5 +12,5 @@ jobs:
         uses: simplelocalize/download@v2.1
         with:
           apiKey: 87fFE19C5b63a784D101E554f5cd75677C890A92372D02c9
-          downloadPath: ./public/locales/{lang}/common.json
+          downloadPath: ../public/locales/{lang}/common.json
           downloadFormat: single-language-json

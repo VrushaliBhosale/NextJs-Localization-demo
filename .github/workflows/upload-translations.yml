@@ -1,0 +1,17 @@
+name: 'Next Localization demo'
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Upload translations
+        uses: simplelocalize/upload@v2.1
+        with:
+          apiKey: 87fFE19C5b63a784D101E554f5cd75677C890A92372D02c9
+          uploadPath: /public/locales/{lang}/common.json
+          uploadFormat: single-language-json
+          uploadOptions: "PUBLISH_AFTER_IMPORT,TRIM_LEADING_TRIALING_SPACES" # optional
